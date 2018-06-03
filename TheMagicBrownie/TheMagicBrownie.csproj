@@ -3,6 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
     <UserSecretsId>aspnet-TheMagicBrownie-A166407E-4208-413A-A646-FA4DD54192DD</UserSecretsId>
+    <RootNamespace>com.tmb.web</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

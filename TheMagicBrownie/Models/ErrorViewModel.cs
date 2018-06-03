@@ -1,6 +1,6 @@
 using System;
 
-namespace TheMagicBrownie.Models
+namespace com.tmb.web.Models
 {
     public class ErrorViewModel
     {
