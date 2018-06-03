@@ -24,5 +24,7 @@ namespace com.tmb.web.Controllers
         {
             return HtmlEncoder.Default.Encode($"Hello {name}, ID: {ID}");
         }
+
+        //https://docs.microsoft.com/en-us/aspnet/core/tutorials/first-mvc-app/adding-view?view=aspnetcore-2.1
     }
 }
