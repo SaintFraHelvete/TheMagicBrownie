@@ -1,94 +1,708 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿
+@{
+    ViewData["Title"] = "Inicio";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
-    <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-    </ol>
-    <div class="carousel-inner" role="listbox">
-        <div class="item active">
-            <img src="~/images/banner1.svg" alt="ASP.NET" class="img-responsive" />
-            <div class="carousel-caption" role="option">
-                <p>
-                    Learn how to build ASP.NET apps that can run anywhere.
-                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=525028&clcid=0x409">
-                        Learn More
-                    </a>
-                </p>
-            </div>
-        </div>
-        <div class="item">
-            <img src="~/images/banner2.svg" alt="Visual Studio" class="img-responsive" />
-            <div class="carousel-caption" role="option">
-                <p>
-                    There are powerful new features in Visual Studio for building modern web apps.
-                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=525030&clcid=0x409">
-                        Learn More
-                    </a>
-                </p>
-            </div>
-        </div>
-        <div class="item">
-            <img src="~/images/banner3.svg" alt="Microsoft Azure" class="img-responsive" />
-            <div class="carousel-caption" role="option">
-                <p>
-                    Learn how Microsoft's Azure cloud platform allows you to build, deploy, and scale web apps.
-                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=525027&clcid=0x409">
-                        Learn More
-                    </a>
-                </p>
-            </div>
-        </div>
-    </div>
-    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-    </a>
-</div>
+<!-- Main navigation -->
+@*<header>*@
+<!--Navbar-->
+<nav class="navbar navbar-expand-md navbar-dark fixed-top scrolling-navbar">
+    <div class="container">
+        <a class="navbar-brand text-center d-none d-sm-block d-md-none" href="#">
+            <strong>The Magic Brownie</strong>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item text-center">
+                    <a class="nav-link" href="#">Pedidos</a>
+                </li>
+                <li class="nav-item text-center">
+                    <a class="nav-link" href="#">Productos</a>
+                </li>
 
-<div class="row">
-    <div class="col-md-3">
-        <h2>Application uses</h2>
-        <ul>
-            <li>Sample pages using ASP.NET Core MVC</li>
-            <li>Theming using <a href="https://go.microsoft.com/fwlink/?LinkID=398939">Bootstrap</a></li>
-        </ul>
+                <li class="nav-item text-center d-sm-none d-md-block">
+                    <a class="nav-link navbar-brand text-center" href="#">
+                        <strong>The Magic Brownie</strong>
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+
+                <li class="nav-item text-center">
+                    <a class="nav-link" href="#">Conozcanos</a>
+                </li>
+                <li class="nav-item text-center">
+                    <a class="nav-link" href="#">Cómo funciona?</a>
+                </li>
+            </ul>
+
+            <!-- Right -->
+            <ul class="navbar-nav nav-flex-icons">
+                <li class="nav-item">
+                    <a class="nav-link waves-effect">
+                        <span class="badge red z-depth-1 mr-1"> 1 </span>
+                        <i class="fa fa-shopping-basket"></i>@*fa-shopping-cart*@
+                        @*<span class="clearfix d-none d-sm-inline-block"> Canasta </span>*@
+                    </a>
+                </li>
+            </ul>
+
+        </div>
     </div>
-    <div class="col-md-3">
-        <h2>How to</h2>
-        <ul>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=398600">Add a Controller and View</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699315">Manage User Secrets using Secret Manager.</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699316">Use logging to log a message.</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699317">Add packages using NuGet.</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699319">Target development, staging or production environment.</a></li>
-        </ul>
+</nav>
+
+
+
+
+
+
+<!-- Full Page Intro -->
+@*<div class="header-view" style="background-image: url('/images/cake.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+        <!-- Mask & flexbox options-->
+        <div class="mask header-view rgba-gradient d-flex justify-content-center align-items-center">
+            <!-- Content -->
+            <div class="container">
+                <!--Grid row-->
+                <div class="row">
+                    <!--Grid column-->
+                    <div class="col-md-6 white-text text-center text-md-left mt-xl-5 mb-5 wow fadeInLeft" data-wow-delay="0.3s">
+                        <h1 class="h1-responsive font-weight-bold mt-sm-5">Pastelería hecha con amor </h1>
+                        <hr class="hr-light">
+                        <h6 class="mb-4">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem repellendus quasi fuga nesciunt
+                            dolorum nulla magnam veniam sapiente, fugiat! Commodi sequi non animi ea dolor molestiae
+                            iste.
+                        </h6>
+                        <a class="btn btn-white">Pedidos</a>
+                        <a class="btn btn-outline-white">Leer más</a>
+                    </div>
+                    <!--Grid column-->
+                    <!--Grid column-->
+                    <div class="col-md-6 col-xl-5 mt-xl-5 wow fadeInRight" data-wow-delay="0.3s">
+                        <img src="https://mdbootstrap.com/img/Mockups/Transparent/Small/admin-new.png" alt="" class="img-fluid">
+                    </div>
+                    <!--Grid column-->
+                </div>
+                <!--Grid row-->
+            </div>
+            <!-- Content -->
+        </div>
+        <!-- Mask & flexbox options-->
+    </div>*@
+
+
+
+
+
+
+
+
+
+@*<head>*@
+    <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel">        
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner " role="listbox">
+                
+                    <!-- Slide One - Set the background image for this slide in the line below -->
+                <div class="carousel-item active" style="background-image: url('/images/cake.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+                    <div class="mask header-view rgba-gradient d-flex justify-content-center align-items-center">
+                        @*<div class="carousel-caption d-none d-md-block">
+                            <h3>First Slide</h3>
+                            <p>This is a description for the first slide.</p>
+                        </div>*@
+                    </div>
+                </div>
+                    <!-- Slide Two - Set the background image for this slide in the line below -->
+                <div class="carousel-item" style="background-image: url('/images/pexels-photo-959079.jpeg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+                    <div class="mask header-view rgba-gradient d-flex justify-content-center align-items-center">
+                        @*<div class="carousel-caption d-none d-md-block">
+                            <h3>Second Slide</h3>
+                            <p>This is a description for the second slide.</p>
+                        </div>*@
+                    </div>
+                </div>
+                    <!-- Slide Three - Set the background image for this slide in the line below -->
+                <div class="carousel-item" style="background-image: url('/images/baking-00.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+                    <div class="mask header-view rgba-gradient d-flex justify-content-center align-items-center">
+                        @*<div class="carousel-caption d-none d-md-block">
+                            <h3>Third Slide</h3>
+                            <p>This is a description for the third slide.</p>
+                        </div>*@
+                    </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
     </div>
-    <div class="col-md-3">
-        <h2>Overview</h2>
-        <ul>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=518008">Conceptual overview of what is ASP.NET Core</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699320">Fundamentals of ASP.NET Core such as Startup and middleware.</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=398602">Working with Data</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=398603">Security</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=699321">Client side development</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=699322">Develop on different platforms</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=699323">Read more on the documentation site</a></li>
-        </ul>
-    </div>
-    <div class="col-md-3">
-        <h2>Run &amp; Deploy</h2>
-        <ul>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=517851">Run your app</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=517853">Run tools such as EF migrations and more</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=398609">Publish to Microsoft Azure Web Apps</a></li>
-        </ul>
-    </div>
+@*</head>*@
+
+
+
+
+
+
+
+
+
+
+<!-- Full Page Intro -->
+@*</header>*@
+<!-- Main navigation -->
+
+<div class="container">
+
+    <!-- Nuestros Productos -->
+    <section class="text-center my-5">
+
+        <!-- Section heading -->
+        <h2 class="h1-responsive font-weight-bold my-5">Nuestros productos</h2>
+        <!-- Section description -->
+        <p class="grey-text w-responsive mx-auto mb-5">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit est laborum.</p>
+
+        <!-- Grid row -->
+        <div class="row text-center">
+
+            <!-- Grid column -->
+            <div class="col-lg-4 col-md-12 mb-lg-0 mb-4">
+                <!--Featured image-->
+                <div class="view overlay rounded z-depth-1">
+                    <img src="~/images/cake3.jpg" class="img-fluid" alt="Sample project image">
+                    <a>
+                        <div class="mask rgba-white-slight"></div>
+                    </a>
+                </div>
+                <!--Excerpt-->
+                <div class="card-body pb-0">
+                    <h4 class="font-weight-bold my-3">Festividades y Eventos</h4>
+                    <p class="grey-text">
+                        Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae.
+                    </p>
+                    <a class="btn btn-indigo btn-sm"><i class="fa fa-clone left"></i> Ver más</a>
+                </div>
+            </div>
+            <!-- Grid column -->
+            <!-- Grid column -->
+            <div class="col-lg-4 col-md-6 mb-md-0 mb-4">
+                <!--Featured image-->
+                <div class="view overlay rounded z-depth-1">
+                    <img src="~/images/cupcake1.jpg" class="img-fluid" alt="Sample project image">
+                    <a>
+                        <div class="mask rgba-white-slight"></div>
+                    </a>
+                </div>
+                <!--Excerpt-->
+                <div class="card-body pb-0">
+                    <h4 class="font-weight-bold my-3">Regalos Gourmet</h4>
+                    <p class="grey-text">
+                        Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae.
+                    </p>
+                    <a class="btn btn-indigo btn-sm"><i class="fa fa-clone left"></i> Ver más</a>
+                </div>
+            </div>
+            <!-- Grid column -->
+            <!-- Grid column -->
+            <div class="col-lg-4 col-md-6">
+                <!--Featured image-->
+                <div class="view overlay rounded z-depth-1">
+                    <img src="~/images/appetizers.jpg" class="img-fluid" alt="Sample project image">
+                    <a>
+                        <div class="mask rgba-white-slight"></div>
+                    </a>
+                </div>
+                <!--Excerpt-->
+                <div class="card-body pb-0">
+                    <h4 class="font-weight-bold my-3">Crea el tuyo propio</h4>
+                    <p class="grey-text">
+                        Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae.
+                    </p>
+                    <a class="btn btn-indigo btn-sm"><i class="fa fa-clone left"></i> Ver más</a>
+                </div>
+            </div>
+            <!-- Grid column -->
+
+        </div>
+        <!-- Grid row -->
+
+    </section>
+    <!-- Nuestros Productos -->
+    <!-- Productos Destacados -->
+    <section class="text-center my-5">
+        <!--Carousel Wrapper-->
+        <h2 class="h1-responsive font-weight-bold my-5">Productos Destacados</h2>
+
+        <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
+
+            <!--Controls-->
+            @*<div class="controls-top">
+                <a class="btn-floating" href="#multi-item-example" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
+                <a class="btn-floating" href="#multi-item-example" data-slide="next"><i class="fa fa-chevron-right"></i></a>
+                </div>*@
+            <!--/.Controls-->
+            <!--Indicators-->
+            <ol class="carousel-indicators">
+                <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
+                <li data-target="#multi-item-example" data-slide-to="1"></li>
+                <li data-target="#multi-item-example" data-slide-to="2"></li>
+            </ol>
+            <!--/.Indicators-->
+            <!--Slides-->
+            <div class="carousel-inner" role="listbox">
+
+                <!--First slide-->
+                <div class="carousel-item active">
+
+                    <div class="col-md-4">
+                        <div class="card mb-2">
+                            <img class="card-img-top" src="http://via.placeholder.com/708x472" alt="Card image cap">
+                            <div class="card-body">
+                                <h4 class="card-title">Nombre del producto</h4>
+                                <p class="card-text">Pequeña descipcion del producto.</p>
+                                <small class="text-muted">$10</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 clearfix d-none d-md-block">
+                        <div class="card mb-2">
+                            <img class="card-img-top" src="http://via.placeholder.com/708x472" alt="Card image cap">
+                            <div class="card-body">
+                                <h4 class="card-title">Nombre del producto</h4>
+                                <p class="card-text">Pequeña descipcion del producto.</p>
+                                <small class="text-muted">$20</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 clearfix d-none d-md-block">
+                        <div class="card mb-2">
+                            <img class="card-img-top" src="http://via.placeholder.com/708x472" alt="Card image cap">
+                            <div class="card-body">
+                                <h4 class="card-title">Nombre del producto</h4>
+                                <p class="card-text">Pequeña descipcion del producto.</p>
+                                <small class="text-muted">$30</small>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!--/.First slide-->
+                <!--Second slide-->
+                <div class="carousel-item">
+
+                    <div class="col-md-4">
+                        <div class="card mb-2">
+                            <img class="card-img-top" src="http://via.placeholder.com/708x472" alt="Card image cap">
+                            <div class="card-body">
+                                <h4 class="card-title">Nombre del producto</h4>
+                                <p class="card-text">Pequeña descipcion del producto.</p>
+                                <small class="text-muted">$40</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 clearfix d-none d-md-block">
+                        <div class="card mb-2">
+                            <img class="card-img-top" src="http://via.placeholder.com/708x472" alt="Card image cap">
+                            <div class="card-body">
+                                <h4 class="card-title">Nombre del producto</h4>
+                                <p class="card-text">Pequeña descipcion del producto.</p>
+                                <small class="text-muted">$50</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 clearfix d-none d-md-block">
+                        <div class="card mb-2">
+                            <img class="card-img-top" src="http://via.placeholder.com/708x472" alt="Card image cap">
+                            <div class="card-body">
+                                <h4 class="card-title">Nombre del producto</h4>
+                                <p class="card-text">Pequeña descipcion del producto.</p>
+                                <small class="text-muted">$60</small>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!--/.Second slide-->
+                <!--Third slide-->
+                <div class="carousel-item">
+
+                    <div class="col-md-4">
+                        <div class="card mb-2">
+                            <img class="card-img-top" src="http://via.placeholder.com/708x472" alt="Card image cap">
+                            <div class="card-body">
+                                <h4 class="card-title">Nombre del producto</h4>
+                                <p class="card-text">Pequeña descipcion del producto.</p>
+                                <small class="text-muted">$70</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 clearfix d-none d-md-block">
+                        <div class="card mb-2">
+                            <img class="card-img-top" src="http://via.placeholder.com/708x472" alt="Card image cap">
+                            <div class="card-body">
+                                <h4 class="card-title">Nombre del producto</h4>
+                                <p class="card-text">Pequeña descipcion del producto.</p>
+                                <small class="text-muted">$80</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 clearfix d-none d-md-block">
+                        <div class="card mb-2">
+                            <img class="card-img-top" src="http://via.placeholder.com/708x472" alt="Card image cap">
+                            <div class="card-body">
+                                <h4 class="card-title">Nombre del producto</h4>
+                                <p class="card-text">Pequeña descipcion del producto.</p>
+                                <small class="text-muted">$90</small>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!--/.Third slide-->
+
+            </div>
+            <!--/.Slides-->
+
+        </div>
+        <!--/.Carousel Wrapper-->
+    </section>
+    <!-- Productos Destacados -->
+    <!-- Shop by Category -->
+    <section class="my-5">
+
+        @*<h2 class="h1-responsive font-weight-bold my-5">Productos Destacados</h2>*@
+
+        <h4 class="mb-0">Pasteles</h4>
+        <hr class="mt-0" />
+        <!-- Card deck -->
+        <div class="row">
+
+            <!-- Card -->
+            <div class="col-md-3">
+                <div class="card mb-4">
+
+                    <!--Card image-->
+                    <div class="view overlay">
+                        <img class="card-img-top" src="http://via.placeholder.com/708x472" alt="Card image cap">
+                        <a href="#!">
+                            <div class="mask rgba-white-slight"></div>
+                        </a>
+                    </div>
+
+                    <!--Card content-->
+                    <div class="card-body">
+
+                        <h4 class="card-title">Nombre del producto</h4>
+                        <p class="card-text">Pequeña descipcion del producto.</p>
+                        <strong class="text-muted">$20</strong>
+
+                    </div>
+
+                </div>
+            </div>
+            <!-- Card -->
+            <!-- Card -->
+            <div class="col-md-3">
+                <div class="card mb-4">
+
+                    <!--Card image-->
+                    <div class="view overlay">
+                        <img class="card-img-top" src="http://via.placeholder.com/708x472" alt="Card image cap">
+                        <a href="#!">
+                            <div class="mask rgba-white-slight"></div>
+                        </a>
+                    </div>
+
+                    <!--Card content-->
+                    <div class="card-body">
+
+                        <h4 class="card-title">Nombre del producto</h4>
+                        <p class="card-text">Pequeña descipcion del producto.</p>
+                        <strong class="text-muted">$20</strong>
+
+                    </div>
+
+                </div>
+            </div>
+            <!-- Card -->
+            <!-- Card -->
+            <div class="col-md-3">
+                <div class="card mb-4">
+
+                    <!--Card image-->
+                    <div class="view overlay">
+                        <img class="card-img-top" src="http://via.placeholder.com/708x472" alt="Card image cap">
+                        <a href="#!">
+                            <div class="mask rgba-white-slight"></div>
+                        </a>
+                    </div>
+
+                    <!--Card content-->
+                    <div class="card-body">
+
+                        <h4 class="card-title">Nombre del producto</h4>
+                        <p class="card-text">Pequeña descipcion del producto.</p>
+                        <strong class="text-muted">$20</strong>
+
+                    </div>
+
+                </div>
+            </div>
+            <!-- Card -->
+            <!-- Card -->
+            <div class="col-md-3">
+                <div class="card mb-4">
+
+                    <!--Card image-->
+                    <div class="view overlay">
+                        <img class="card-img-top" src="http://via.placeholder.com/708x472" alt="Card image cap">
+                        <a href="#!">
+                            <div class="mask rgba-white-slight"></div>
+                        </a>
+                    </div>
+
+                    <!--Card content-->
+                    <div class="card-body">
+
+                        <h4 class="card-title">Nombre del producto</h4>
+                        <p class="card-text">Pequeña descipcion del producto.</p>
+                        <strong class="text-muted">$20</strong>
+
+                    </div>
+
+                </div>
+            </div>
+            <!-- Card -->
+        </div>
+        <!-- Card deck -->
+
+
+        <h4 class="mb-0">Cupcakes</h4>
+        <hr class="mt-0" />
+        <!-- Card deck -->
+        <div class="row">
+
+            <!-- Card -->
+            <div class="col-md-3">
+                <div class="card mb-4">
+
+                    <!--Card image-->
+                    <div class="view overlay">
+                        <img class="card-img-top" src="http://via.placeholder.com/708x472" alt="Card image cap">
+                        <a href="#!">
+                            <div class="mask rgba-white-slight"></div>
+                        </a>
+                    </div>
+
+                    <!--Card content-->
+                    <div class="card-body">
+
+                        <h4 class="card-title">Nombre del producto</h4>
+                        <p class="card-text">Pequeña descipcion del producto.</p>
+                        <strong class="text-muted">$20</strong>
+
+                    </div>
+
+                </div>
+            </div>
+            <!-- Card -->
+            <!-- Card -->
+            <div class="col-md-3">
+                <div class="card mb-4">
+
+                    <!--Card image-->
+                    <div class="view overlay">
+                        <img class="card-img-top" src="http://via.placeholder.com/708x472" alt="Card image cap">
+                        <a href="#!">
+                            <div class="mask rgba-white-slight"></div>
+                        </a>
+                    </div>
+
+                    <!--Card content-->
+                    <div class="card-body">
+
+                        <h4 class="card-title">Nombre del producto</h4>
+                        <p class="card-text">Pequeña descipcion del producto.</p>
+                        <strong class="text-muted">$20</strong>
+
+                    </div>
+
+                </div>
+            </div>
+            <!-- Card -->
+            <!-- Card -->
+            <div class="col-md-3">
+                <div class="card mb-4">
+
+                    <!--Card image-->
+                    <div class="view overlay">
+                        <img class="card-img-top" src="http://via.placeholder.com/708x472" alt="Card image cap">
+                        <a href="#!">
+                            <div class="mask rgba-white-slight"></div>
+                        </a>
+                    </div>
+
+                    <!--Card content-->
+                    <div class="card-body">
+
+                        <h4 class="card-title">Nombre del producto</h4>
+                        <p class="card-text">Pequeña descipcion del producto.</p>
+                        <strong class="text-muted">$20</strong>
+
+                    </div>
+
+                </div>
+            </div>
+            <!-- Card -->
+            <!-- Card -->
+            <div class="col-md-3">
+                <div class="card mb-4">
+
+                    <!--Card image-->
+                    <div class="view overlay">
+                        <img class="card-img-top" src="http://via.placeholder.com/708x472" alt="Card image cap">
+                        <a href="#!">
+                            <div class="mask rgba-white-slight"></div>
+                        </a>
+                    </div>
+
+                    <!--Card content-->
+                    <div class="card-body">
+
+                        <h4 class="card-title">Nombre del producto</h4>
+                        <p class="card-text">Pequeña descipcion del producto.</p>
+                        <strong class="text-muted">$20</strong>
+
+                    </div>
+
+                </div>
+            </div>
+            <!-- Card -->
+        </div>
+        <!-- Card deck -->
+        <a href="#" class="pull-right">Ver todos</a>
+
+        <h4 class="mb-0">Bocaditos</h4>
+        <hr class="mt-0" />
+        <!-- Card deck -->
+        <div class="row">
+
+            <!-- Card -->
+            <div class="col-md-3">
+                <div class="card mb-4">
+
+                    <!--Card image-->
+                    <div class="view overlay">
+                        <img class="card-img-top" src="http://via.placeholder.com/708x472" alt="Card image cap">
+                        <a href="#!">
+                            <div class="mask rgba-white-slight"></div>
+                        </a>
+                    </div>
+
+                    <!--Card content-->
+                    <div class="card-body">
+
+                        <h4 class="card-title">Nombre del producto</h4>
+                        <p class="card-text">Pequeña descipcion del producto.</p>
+                        <strong class="text-muted">$20</strong>
+
+                    </div>
+
+                </div>
+            </div>
+            <!-- Card -->
+            <!-- Card -->
+            <div class="col-md-3">
+                <div class="card mb-4">
+
+                    <!--Card image-->
+                    <div class="view overlay">
+                        <img class="card-img-top" src="http://via.placeholder.com/708x472" alt="Card image cap">
+                        <a href="#!">
+                            <div class="mask rgba-white-slight"></div>
+                        </a>
+                    </div>
+
+                    <!--Card content-->
+                    <div class="card-body">
+
+                        <h4 class="card-title">Nombre del producto</h4>
+                        <p class="card-text">Pequeña descipcion del producto.</p>
+                        <strong class="text-muted">$20</strong>
+
+                    </div>
+
+                </div>
+            </div>
+            <!-- Card -->
+            <!-- Card -->
+            <div class="col-md-3">
+                <div class="card mb-4">
+
+                    <!--Card image-->
+                    <div class="view overlay">
+                        <img class="card-img-top" src="http://via.placeholder.com/708x472" alt="Card image cap">
+                        <a href="#!">
+                            <div class="mask rgba-white-slight"></div>
+                        </a>
+                    </div>
+
+                    <!--Card content-->
+                    <div class="card-body">
+
+                        <h4 class="card-title">Nombre del producto</h4>
+                        <p class="card-text">Pequeña descipcion del producto.</p>
+                        <strong class="text-muted">$20</strong>
+
+                    </div>
+
+                </div>
+            </div>
+            <!-- Card -->
+            <!-- Card -->
+            <div class="col-md-3">
+                <div class="card mb-4">
+
+                    <!--Card image-->
+                    <div class="view overlay">
+                        <img class="card-img-top" src="http://via.placeholder.com/708x472" alt="Card image cap">
+                        <a href="#!">
+                            <div class="mask rgba-white-slight"></div>
+                        </a>
+                    </div>
+
+                    <!--Card content-->
+                    <div class="card-body">
+
+                        <h4 class="card-title">Nombre del producto</h4>
+                        <p class="card-text">Pequeña descipcion del producto.</p>
+                        <strong class="text-muted">$20</strong>
+
+                    </div>
+
+                </div>
+            </div>
+            <!-- Card -->
+        </div>
+        <!-- Card deck -->
+        <a href="#" class="pull-right">Ver todos</a>
+    </section>
+    <!-- Shop by Category -->
 </div>
