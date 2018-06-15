@@ -76,3 +76,7 @@ h6 {
     -o-background-size: cover;
     background-size: cover;
 }
+
+.card {
+    background-color: rgba(126, 123, 215, 0.2);
+}
