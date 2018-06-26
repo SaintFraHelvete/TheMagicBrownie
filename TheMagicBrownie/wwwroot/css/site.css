@@ -32,6 +32,7 @@ header,
 
 .top-nav-collapse {
     background-color: #424f95 !important;
+    /*background-color: rgba(126, 123, 215, 1) !important;*/
 }
 
 .navbar:not(.top-nav-collapse) {
@@ -80,3 +81,4 @@ h6 {
 .card {
     background-color: rgba(126, 123, 215, 0.2);
 }
+

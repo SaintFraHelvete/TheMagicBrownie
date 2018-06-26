@@ -5,12 +5,11 @@
 }
 
 <!-- Main navigation -->
-@*<header>*@
 <!--Navbar-->
 <nav class="navbar navbar-expand-md navbar-dark fixed-top scrolling-navbar">
     <div class="container">
-        <a class="navbar-brand text-center d-none d-sm-block d-md-none" href="#">
-            <strong>The Magic Brownie</strong>
+        <a class="navbar-brand text-center" href="#">
+            <strong style="font-family: 'Pacifico', cursive;">The Magic Brownie</strong>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -25,8 +24,8 @@
                 </li>
 
                 <li class="nav-item text-center d-sm-none d-md-block">
-                    <a class="nav-link navbar-brand text-center" href="#">
-                        <strong>The Magic Brownie</strong>
+                    <a class="nav-link navbar-brand text-center pt-0" href="#">
+                        <strong style="font-family: 'Pacifico', cursive; font-size:1.5rem;" class="">The Magic Brownie</strong>
                         <span class="sr-only">(current)</span>
                     </a>
                 </li>
@@ -53,167 +52,154 @@
         </div>
     </div>
 </nav>
-
-@*<head>*@
-    <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel">        
-            @*<ol class="carousel-indicators">
-                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-            </ol>*@
-            <div class="carousel-inner " role="listbox">
-                
-                    <!-- Slide One - Set the background image for this slide in the line below -->
-                <div class="carousel-item active" style="background-image: url('/images/cake.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
-                    <div class="mask header-view rgba-gradient d-flex justify-content-center align-items-center">
-                        <!-- Content -->
-                        <div class="container">
-                            <!--Grid row-->
-                            <div class="row">
-                                <!--Grid column-->
-                                <div class="col-md-6 white-text text-center text-md-left mt-xl-5 mb-5 wow fadeInLeft" data-wow-delay="0.3s">
-                                    <h1 class="h1-responsive font-weight-bold mt-sm-5">Pastelería hecha con amor </h1>
-                                    <hr class="hr-light">
-                                    <h6 class="mb-4">
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem repellendus quasi fuga nesciunt
-                                        dolorum nulla magnam veniam sapiente, fugiat! Commodi sequi non animi ea dolor molestiae
-                                        iste.
-                                    </h6>
-                                    <a class="btn btn-white">Pedidos</a>
-                                    <a class="btn btn-outline-white">Leer más</a>
-                                </div>
-                                <!--Grid column-->
-                                <!--Grid column-->
-                                <div class="col-md-6 col-xl-5 mt-xl-5 wow fadeInRight" data-wow-delay="0.3s">
-                                    @*<img src="https://mdbootstrap.com/img/Mockups/Transparent/Small/admin-new.png" alt="" class="img-fluid">*@
-                                </div>
-                                <!--Grid column-->
-                            </div>
-                            <!--Grid row-->
-                        </div>
-                        <!-- Content -->
-                    </div>
-                </div>
-                <!-- Slide Two - Set the background image for this slide in the line below -->
-                <div class="carousel-item" style="background-image: url('/images/pexels-photo-959079.jpeg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
-                    <div class="mask header-view rgba-gradient d-flex justify-content-center align-items-center">
-                        <!-- Content -->
-                        <div class="container">
-                            <!--Grid row-->
-                            <div class="row">
-                                <!--Grid column-->
-                                <div class="col-md-6 white-text text-center text-md-left mt-xl-5 mb-5 wow fadeInLeft" data-wow-delay="0.3s">
-                                    <h1 class="h1-responsive font-weight-bold mt-sm-5">Suscríbase a nuestro boletín</h1>
-                                    <hr class="hr-light">
-                                    <h6 class="mb-4">
-                                        No se pierda nuestras promociones y nuevos productos. Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                                    </h6>
-                                </div>
-                                <!--Grid column-->
-                                <!--Grid column-->
-                                <div class="col-md-6 col-xl-5 mt-xl-5 wow fadeInRight" data-wow-delay="0.3s">
-                                    <!--Form-->
-                                    <div class="card wow fadeInRight" data-wow-delay="0.3s">
-                                        <div class="card-body">
-                                            <!--Header-->
-                                            <div class="text-center">
-                                                <h3 class="white-text">
-                                                    @*<i class="fa fa-user white-text"></i>*@ Registrate gratis!
-                                                </h3>
-                                                <hr class="hr-light">
-                                            </div>
-                                            <!--Body-->
-                                            <div class="md-form">
-                                                <i class="fa fa-user prefix white-text active"></i>
-                                                <input type="text" id="form3" class="white-text form-control">
-                                                <label for="form3" class="active white-text">Nombre</label>
-                                            </div>
-                                            <div class="md-form">
-                                                <i class="fa fa-envelope prefix white-text active"></i>
-                                                <input type="email" id="form2" class="white-text form-control">
-                                                <label for="form2" class="active white-text">Email</label>
-                                            </div>
-                                            <div class="text-center mt-4">
-                                                <button class="btn btn-indigo">Regístrate</button>
-                                                @*<hr class="hr-light mb-3 mt-4">
-                                                <div class="inline-ul text-center d-flex justify-content-center">
-                                                    <a class="p-2 m-2 tw-ic">
-                                                        <i class="fa fa-twitter white-text"></i>
-                                                    </a>
-                                                    <a class="p-2 m-2 li-ic">
-                                                        <i class="fa fa-linkedin white-text"> </i>
-                                                    </a>
-                                                    <a class="p-2 m-2 ins-ic">
-                                                        <i class="fa fa-instagram white-text"> </i>
-                                                    </a>
-                                                </div>*@
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!--/.Form-->
-                                </div>
-                                <!--Grid column-->
-                            </div>
-                            <!--Grid row-->
-                        </div>
-                        <!-- Content -->
-                    </div>
-                </div>
-                <!-- Slide Three - Set the background image for this slide in the line below -->
-                <div class="carousel-item" style="background-image: url('/images/baking-00.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
-                    <div class="mask header-view rgba-gradient d-flex justify-content-center align-items-center">
-                        <!-- Content -->
-                        <div class="container">
-                            <!--Grid row-->
-                            <div class="row">
-                                <!--Grid column-->
-                                <div class="col-md-6 white-text text-center text-md-left mt-xl-5 mb-5 wow fadeInLeft" data-wow-delay="0.3s">
-                                    <h1 class="h1-responsive font-weight-bold mt-sm-5">Pastelería hecha con amor </h1>
-                                    <hr class="hr-light">
-                                    <h6 class="mb-4">
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem repellendus quasi fuga nesciunt
-                                        dolorum nulla magnam veniam sapiente, fugiat! Commodi sequi non animi ea dolor molestiae
-                                        iste.
-                                    </h6>
-                                    <a class="btn btn-white">Pedidos</a>
-                                    <a class="btn btn-outline-white">Leer más</a>
-                                </div>
-                                <!--Grid column-->
-                                <!--Grid column-->
-                                <div class="col-md-6 col-xl-5 mt-xl-5 wow fadeInRight" data-wow-delay="0.3s">
-                                    <img src="~/images/carousel-cupcakes.png" alt="" class="img-fluid">
-                                </div>
-                                <!--Grid column-->
-                            </div>
-                            <!--Grid row-->
-                        </div>
-                        <!-- Content -->
-                    </div>
-                    </div>
-                </div>
-                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
-            </div>
-    </div>
-@*</head>*@
-
-
-
-
-
-
-
-
-
-
+<!--Navbar-->
 <!-- Full Page Intro -->
-@*</header>*@
+<div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel">
+    @*<ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>*@
+    <div class="carousel-inner " role="listbox">
+
+        <!-- Slide One - Set the background image for this slide in the line below -->
+        <div class="carousel-item active" style="background-image: url('/images/cake.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+            <div class="mask header-view rgba-gradient d-flex justify-content-center align-items-center">
+                <!-- Content -->
+                <div class="container">
+                    <!--Grid row-->
+                    <div class="row">
+                        <!--Grid column-->
+                        <div class="col-md-6 white-text text-center text-md-left mt-xl-5 mb-5 wow fadeInLeft" data-wow-delay="0.3s">
+                            <h1 class="h1-responsive font-weight-bold mt-sm-5 cakeshop-title">Pastelería hecha con amor </h1>
+                            <hr class="hr-light">
+                            <h6 class="mb-4">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem repellendus quasi fuga nesciunt
+                                dolorum nulla magnam veniam sapiente, fugiat! Commodi sequi non animi ea dolor molestiae
+                                iste.
+                            </h6>
+                            <a class="btn btn-white">Pedidos</a>
+                            <a class="btn btn-outline-white">Leer más</a>
+                        </div>
+                        <!--Grid column-->
+                        <!--Grid column-->
+                        <div class="col-md-6 col-xl-5 mt-xl-5 wow fadeInRight" data-wow-delay="0.3s">
+                            @*<img src="https://mdbootstrap.com/img/Mockups/Transparent/Small/admin-new.png" alt="" class="img-fluid">*@
+                        </div>
+                        <!--Grid column-->
+                    </div>
+                    <!--Grid row-->
+                </div>
+                <!-- Content -->
+            </div>
+        </div>
+        <!-- Slide Two - Set the background image for this slide in the line below -->
+        <div class="carousel-item" style="background-image: url('/images/baking-00.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+            <div class="mask header-view rgba-gradient d-flex justify-content-center align-items-center">
+                <!-- Content -->
+                <div class="container">
+                    <!--Grid row-->
+                    <div class="row">
+                        <!--Grid column-->
+                        <div class="col-md-6 white-text text-center text-md-left mt-xl-5 mb-5 wow fadeInLeft" data-wow-delay="0.3s">
+                            <h1 class="h1-responsive font-weight-bold mt-sm-5">Pasteles personalizados </h1>
+                            <hr class="hr-light">
+                            <h6 class="mb-4">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem repellendus quasi fuga nesciunt
+                                dolorum nulla magnam veniam sapiente, fugiat! Commodi sequi non animi ea dolor molestiae
+                                iste.
+                            </h6>
+                            <a class="btn btn-white">Pedidos</a>
+                            <a class="btn btn-outline-white">Leer más</a>
+                        </div>
+                        <!--Grid column-->
+                        <!--Grid column-->
+                        <div class="col-md-6 col-xl-5 mt-xl-5 wow fadeInRight" data-wow-delay="0.3s">
+                            <img src="~/images/carousel-cupcakes.png" alt="" class="img-fluid mt-5">
+                        </div>
+                        <!--Grid column-->
+                    </div>
+                    <!--Grid row-->
+                </div>
+                <!-- Content -->
+            </div>
+        </div>
+        <!-- Slide Three - Set the background image for this slide in the line below -->
+        <div class="carousel-item" style="background-image: url('/images/pexels-photo-959079.jpeg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+            <div class="mask header-view rgba-gradient d-flex justify-content-center align-items-center">
+                <!-- Content -->
+                <div class="container">
+                    <!--Grid row-->
+                    <div class="row">
+                        <!--Grid column-->
+                        <div class="col-md-6 white-text text-center text-md-left mt-xl-5 mb-5 wow fadeInLeft" data-wow-delay="0.3s">
+                            <h1 class="h1-responsive font-weight-bold mt-sm-5">Suscríbase a nuestro boletín</h1>
+                            <hr class="hr-light">
+                            <h6 class="mb-4">
+                                No se pierda nuestras promociones y nuevos productos. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            </h6>
+                        </div>
+                        <!--Grid column-->
+                        <!--Grid column-->
+                        <div class="col-md-6 col-xl-5 mt-xl-5 wow fadeInRight" data-wow-delay="0.3s">
+                            <!--Form-->
+                            <div class="card wow fadeInRight" data-wow-delay="0.3s">
+                                <div class="card-body">
+                                    <!--Header-->
+                                    <div class="text-center">
+                                        <h3 class="white-text">
+                                            @*<i class="fa fa-user white-text"></i>*@ Registrate gratis!
+                                        </h3>
+                                        <hr class="hr-light">
+                                    </div>
+                                    <!--Body-->
+                                    <div class="md-form">
+                                        <i class="fa fa-user prefix white-text active"></i>
+                                        <input type="text" id="form3" class="white-text form-control">
+                                        <label for="form3" class="active white-text">Nombre</label>
+                                    </div>
+                                    <div class="md-form">
+                                        <i class="fa fa-envelope prefix white-text active"></i>
+                                        <input type="email" id="form2" class="white-text form-control">
+                                        <label for="form2" class="active white-text">Email</label>
+                                    </div>
+                                    <div class="text-center mt-4">
+                                        <button class="btn btn-indigo">Regístrate</button>
+                                        @*<hr class="hr-light mb-3 mt-4">
+                                            <div class="inline-ul text-center d-flex justify-content-center">
+                                                <a class="p-2 m-2 tw-ic">
+                                                    <i class="fa fa-twitter white-text"></i>
+                                                </a>
+                                                <a class="p-2 m-2 li-ic">
+                                                    <i class="fa fa-linkedin white-text"> </i>
+                                                </a>
+                                                <a class="p-2 m-2 ins-ic">
+                                                    <i class="fa fa-instagram white-text"> </i>
+                                                </a>
+                                            </div>*@
+                                    </div>
+                                </div>
+                            </div>
+                            <!--/.Form-->
+                        </div>
+                        <!--Grid column-->
+                    </div>
+                    <!--Grid row-->
+                </div>
+                <!-- Content -->
+            </div>
+        </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+<!-- Full Page Intro -->
 <!-- Main navigation -->
 
 <div class="container">
@@ -440,9 +426,16 @@
     <!-- Shop by Category -->
     <section class="my-5">
 
-        @*<h2 class="h1-responsive font-weight-bold my-5">Productos Destacados</h2>*@
+        @*<h2 class="h1-responsive font-weight-bold my-5">Nuestros productos</h2>*@
+        <div class="row">
+            <div class="col">
+                <h4 class="pull-left mb-0">Pasteles</h4>
+            </div>
+            <div class="col">
+                <a href="#" class="pull-right">Ver todos</a>
+            </div>
+        </div>
 
-        <h4 class="mb-0">Pasteles</h4>
         <hr class="mt-0" />
         <!-- Card deck -->
         <div class="row">
@@ -547,7 +540,14 @@
         <!-- Card deck -->
 
 
-        <h4 class="mb-0">Cupcakes</h4>
+        <div class="row">
+            <div class="col">
+                <h4 class="pull-left mb-0">Cupcakes</h4>
+            </div>
+            <div class="col">
+                <a href="#" class="pull-right">Ver todos</a>
+            </div>
+        </div>
         <hr class="mt-0" />
         <!-- Card deck -->
         <div class="row">
@@ -650,9 +650,15 @@
             <!-- Card -->
         </div>
         <!-- Card deck -->
-        <a href="#" class="pull-right">Ver todos</a>
 
-        <h4 class="mb-0">Bocaditos</h4>
+        <div class="row">
+            <div class="col">
+                <h4 class="pull-left mb-0">Bocaditos</h4>
+            </div>
+            <div class="col">
+                <a href="#" class="pull-right">Ver todos</a>
+            </div>
+        </div>
         <hr class="mt-0" />
         <!-- Card deck -->
         <div class="row">
@@ -755,7 +761,81 @@
             <!-- Card -->
         </div>
         <!-- Card deck -->
-        <a href="#" class="pull-right">Ver todos</a>
     </section>
     <!-- Shop by Category -->
 </div>
+
+<!-- footer -->
+@*<div class="footer">
+    <div class="indigo darken-4">
+        <div class="row container">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
+                <div class="ft-logo"><img src="https://easetemplate.com/free-website-templates/cointrade/images/logo.png" alt=""></div>
+            </div>
+        </div>
+        <hr class="footer-line">
+        <div class="row container">
+            <!-- footer-about -->
+            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6 ">
+                <div class="footer-widget ">
+                    <div class="footer-title">The magic brownie</div>
+                    <ul class="list-unstyled">
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Support</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Legal & Privacy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- /.footer-about -->
+            <!-- footer-links -->
+            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6 ">
+                <div class="footer-widget ">
+                    <div class="footer-title">Enlaces</div>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Noticias</a></li>
+                        <li><a href="#">Contacte nos</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- /.footer-links -->
+            <!-- footer-links -->
+            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6 ">
+                <div class="footer-widget ">
+                    <div class="footer-title">Social</div>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Google +</a></li>
+                        <li><a href="#">Linked In</a></li>
+                        <li><a href="#">Facebook</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- /.footer-links -->
+            <!-- footer-links -->
+            <div class="col-xl-3 col-lg-3 col-md-12 col-sm-6 col-6 ">
+                <div class="footer-widget ">
+                    <h3 class="footer-title">Subscribase</h3>
+                    <form>
+                        <div class="newsletter-form">
+                            <input class="form-control" placeholder="Ingrese su Email" type="text">
+                            <button class="btn btn-default btn-sm" type="submit">Aceptar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- /.footer-links -->
+            <!-- tiny-footer -->
+        </div>
+        <div class="row">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 text-center white-text" style="background-color:#424f95;">
+                <div class="tiny-footer">
+                    <p>Copyright © All Rights Reserved 2018 </p>
+                </div>
+            </div>
+            <!-- /. tiny-footer -->
+        </div>
+    </div>
+</div>*@
+<!-- /.footer -->
