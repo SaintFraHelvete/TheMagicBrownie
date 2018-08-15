@@ -81,4 +81,7 @@ h6 {
 .card {
     background-color: rgba(126, 123, 215, 0.2);
 }
-
+ 
+.unset-height {
+    height: unset !important;
+}
